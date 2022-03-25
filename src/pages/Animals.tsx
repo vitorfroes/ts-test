@@ -1,26 +1,16 @@
-import { Icon, Info, Select } from "../components/Animals/styles";
+import { Box, Heading } from "@chakra-ui/react";
+import Info from "../components/Animals/Info";
+import Header from "../components/commons/Header";
 
 const Animals = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Animals</h1>
-      </header>
-      <Info>
-        <Select>
-          <option>Horse</option>
-        </Select>
-        <div>Name: Horse</div>
-        <div>
-          Species: <i>Equus ferus caballus</i>
-        </div>
-        <div>Diet:</div>
-        <div>Life span: 30 years</div>
-        <div>
-          <Icon>🐴</Icon>
-        </div>
-      </Info>
-    </div>
+    <Box width="100%" height="100vh" backgroundColor="lightgreen">
+      <Header>
+        <Heading>Animals</Heading>
+      </Header>
+
+      <Info></Info>
+    </Box>
   );
 };
 

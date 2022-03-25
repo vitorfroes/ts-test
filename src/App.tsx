@@ -1,11 +1,16 @@
+import { Box, Heading, Text } from "@chakra-ui/react";
 import "./App.css";
-import Sum from "./components/Sum";
+import Header from "./components/commons/Header";
 
 function App() {
   return (
-    <div className="App">
-      <Sum />
-    </div>
+    <Box w="100%" h="100vh">
+      <Header>
+        <Heading>Welcome!</Heading>
+      </Header>
+
+      <Text>This is a new project...</Text>
+    </Box>
   );
 }
 

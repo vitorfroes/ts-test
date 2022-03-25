@@ -1,18 +1,23 @@
-import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Animals from "./pages/Animals";
+import { ChakraProvider } from "@chakra-ui/react";
+import { theme } from "./theme";
+import Sum from "./pages/Sum";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />}></Route>
-      <Route path="/animals" element={<Animals />}></Route>
-    </Routes>
-  </BrowserRouter>,
+  <ChakraProvider theme={theme}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}></Route>
+        <Route path="/sum" element={<Sum />}></Route>
+        <Route path="/animals" element={<Animals />}></Route>
+      </Routes>
+    </BrowserRouter>
+  </ChakraProvider>,
   document.getElementById("root")
 );
 
